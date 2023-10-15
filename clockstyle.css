@@ -1,0 +1,77 @@
+* {
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(56, 55, 55);
+    color : white;
+    height:100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+#wrapper{
+    display: flex;
+}
+#wrapper div {
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    border-radius: 5px;
+    display:grid;
+    place-items: center;
+    font: bold 34px monospace;
+    letter-spacing: 1px;
+    background-color: rgb(44, 44, 44);
+    z-index:1;
+}
+.circle{
+    width:120px;
+    height:120px;
+    position: absolute;
+    border-radius: 50%;
+    z-index:2;
+}
+.one{
+    background: linear-gradient(to bottom right, red,rgb(180, 98, 180),blue);
+    top:250px;
+    right:350px;
+    filter: blur(5px);
+    animation:anim1 12s linear infinite;
+}
+.two{
+    background: linear-gradient(to bottom right, red,rgb(180, 98, 180),blue);
+    top:200px;
+    left:350px;
+    filter: blur(5px);
+    animation:anim2 12s linear infinite;
+}
+@keyframes anim1{
+    0%{
+        transform: translate(-10%,-10%);
+    }
+    33%{
+        transform: translate(5%,5%);
+    }
+    67%{
+        transform: translate(15%,-15%);
+    }
+    100%{
+        transform: translate(-10%,-10%);
+    }
+}
+@keyframes anim2{
+    0%{
+        transform: translate(10%,10%);
+    }
+    33%{
+        transform: translate(-5%,-5%);
+    }
+    67%{
+        transform: translate(-15%,15%);
+    }
+    100%{
+        transform: translate(10%,10%);
+    }
+}
